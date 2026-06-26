@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="StandardCardResource" load_steps=2 format=3 uid="uid://bjash8sjc2cyt"]
+
+[ext_resource type="Script" uid="uid://dox8s17eu2u0u" path="res://examples/cards/standard_deck/standard_card_resource.gd" id="1_v121c"]
+
+[resource]
+script = ExtResource("1_v121c")
+name = "Three of Clubs"
+value = 3
+front_layout_name = &"standard_layout"
+back_layout_name = &"standard_back_layout"
+metadata/_custom_type_script = "uid://dox8s17eu2u0u"

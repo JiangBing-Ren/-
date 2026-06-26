@@ -1,0 +1,467 @@
+[gd_scene format=3 uid="uid://u6xwwqagfwlf"]
+
+[ext_resource type="Texture2D" uid="uid://cv37bworkhmv3" path="res://Game/图片/角色/头像/朝洛角色图.png" id="1_gvokm"]
+[ext_resource type="Texture2D" uid="uid://bo3u7enpfy51o" path="res://Game/图片/边框/panel-border-009.png" id="2_8fo4b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_khhxn"]
+bg_color = Color(0.46355194, 0.8868474, 0.95952255, 1)
+border_width_left = 30
+border_width_top = 30
+border_width_right = 30
+border_width_bottom = 30
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 306
+corner_radius_top_right = 306
+corner_radius_bottom_right = 306
+corner_radius_bottom_left = 306
+corner_detail = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qsuaf"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 30
+border_width_top = 20
+border_width_right = 30
+border_width_bottom = 20
+border_color = Color(0.2629324, 0.26293248, 0.26293245, 1)
+border_blend = true
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wb4oo"]
+bg_color = Color(0.641934, 0.641934, 0.641934, 1)
+border_width_left = 10
+border_width_top = 8
+border_width_right = 10
+border_width_bottom = 8
+border_color = Color(0.31431612, 0.31431612, 0.3143161, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bowr3"]
+bg_color = Color(0.0006938975, 0.0006938978, 0.00069389684, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+corner_radius_top_left = 66
+corner_radius_top_right = 66
+corner_radius_bottom_right = 66
+corner_radius_bottom_left = 66
+corner_detail = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xkrm3"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 64
+corner_radius_top_right = 64
+corner_radius_bottom_right = 64
+corner_radius_bottom_left = 64
+corner_detail = 16
+
+[node name="玩家HUD" type="Control" unique_id=1540599758]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="顶部栏" type="Control" parent="." unique_id=1750409977]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = -410.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 1.0039335)
+pivot_offset = Vector2(960, 65)
+
+[node name="ColorRect" type="ColorRect" parent="顶部栏" unique_id=1541515743]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="顶部栏/ColorRect" unique_id=424651288]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 1.0125273)
+theme_override_font_sizes/font_size = 32
+text = "顶部栏"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="角色图" type="Control" parent="顶部栏" unique_id=689621467]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = -50.0
+offset_right = 120.0
+offset_bottom = 50.0
+grow_vertical = 2
+
+[node name="角色图容器" type="PanelContainer" parent="顶部栏/角色图" unique_id=1668560442]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+offset_right = 472.0
+offset_bottom = 467.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.2, 0.2)
+theme_override_styles/panel = SubResource("StyleBoxFlat_khhxn")
+
+[node name="角色头像" type="TextureRect" parent="顶部栏/角色图/角色图容器" unique_id=156298176]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_gvokm")
+
+[node name="墨" type="Control" parent="顶部栏" unique_id=102597895]
+anchors_preset = 0
+offset_left = 170.0
+offset_top = 14.803319
+offset_right = 440.0
+offset_bottom = 114.80332
+
+[node name="墨-外框" type="PanelContainer" parent="顶部栏/墨" unique_id=1537740000]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.000659, 1.0002098)
+theme_override_styles/panel = SubResource("StyleBoxFlat_qsuaf")
+
+[node name="墨图标" type="TextureRect" parent="顶部栏/墨" unique_id=1755551528]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 50.0
+offset_top = -50.0
+offset_right = 150.0
+offset_bottom = 50.0
+grow_vertical = 2
+
+[node name="墨数值" type="Label" parent="顶部栏/墨" unique_id=473666465]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -50.0
+offset_right = -60.0
+offset_bottom = 50.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "0/64"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="道具栏" type="Control" parent="顶部栏" unique_id=548597002]
+anchors_preset = 0
+offset_left = 540.0
+offset_top = 10.0
+offset_right = 1090.0
+offset_bottom = 125.0
+
+[node name="道具栏-边框" type="PanelContainer" parent="顶部栏/道具栏" unique_id=1992330786]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_wb4oo")
+
+[node name="道具栏位-0" type="NinePatchRect" parent="顶部栏/道具栏" unique_id=2083838005]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 30.0
+offset_top = -45.0
+offset_right = 120.0
+offset_bottom = 45.0
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_8fo4b")
+
+[node name="道具栏位-1" type="NinePatchRect" parent="顶部栏/道具栏" unique_id=546474498]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 130.0
+offset_top = -45.0
+offset_right = 220.0
+offset_bottom = 45.0
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_8fo4b")
+
+[node name="道具栏位-2" type="NinePatchRect" parent="顶部栏/道具栏" unique_id=1433394747]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 230.0
+offset_top = -45.0
+offset_right = 320.0
+offset_bottom = 45.0
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_8fo4b")
+
+[node name="道具栏位-3" type="NinePatchRect" parent="顶部栏/道具栏" unique_id=1187163912]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 330.0
+offset_top = -45.0
+offset_right = 420.0
+offset_bottom = 45.0
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_8fo4b")
+
+[node name="道具栏位-4" type="NinePatchRect" parent="顶部栏/道具栏" unique_id=2122067846]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 430.0
+offset_top = -45.0
+offset_right = 520.0
+offset_bottom = 45.0
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_8fo4b")
+
+[node name="词条" type="Control" parent="顶部栏" unique_id=522076523]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 1150.0
+offset_top = -57.5
+offset_right = 1550.0
+offset_bottom = 57.5
+grow_vertical = 2
+
+[node name="词条-1" type="PanelContainer" parent="顶部栏/词条" unique_id=1155679608]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -62.5
+offset_right = 125.0
+offset_bottom = 62.5
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bowr3")
+
+[node name="词条位" type="TextureRect" parent="顶部栏/词条/词条-1" unique_id=2062708235]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="词条-2" type="PanelContainer" parent="顶部栏/词条" unique_id=389231235]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 135.0
+offset_top = -62.5
+offset_right = 260.0
+offset_bottom = 62.5
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bowr3")
+
+[node name="词条位" type="TextureRect" parent="顶部栏/词条/词条-2" unique_id=395552221]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="词条-3" type="PanelContainer" parent="顶部栏/词条" unique_id=1988032986]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 270.0
+offset_top = -62.5
+offset_right = 395.0
+offset_bottom = 62.5
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bowr3")
+
+[node name="词条位" type="TextureRect" parent="顶部栏/词条/词条-3" unique_id=114053185]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="计时器" type="Node" parent="顶部栏" unique_id=635966055]
+
+[node name="设置" type="Control" parent="顶部栏" unique_id=1207995651]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = -60.0
+offset_right = -20.0
+offset_bottom = 60.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="设置图标容器" type="PanelContainer" parent="顶部栏/设置" unique_id=103215622]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xkrm3")
+
+[node name="设置图标" type="TextureRect" parent="顶部栏/设置/设置图标容器" unique_id=1347974423]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="战斗区" type="Control" parent="." unique_id=1295937341]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -410.0
+offset_right = 960.0
+offset_bottom = 190.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(960, 300)
+
+[node name="角色-1" type="Node" parent="战斗区" unique_id=2117805450]
+
+[node name="血条" type="Node" parent="战斗区/角色-1" unique_id=517553827]
+
+[node name="敌人-1" type="Node" parent="战斗区" unique_id=1592324616]
+
+[node name="血条" type="Node" parent="战斗区/敌人-1" unique_id=1121201908]
+
+[node name="ColorRect" type="ColorRect" parent="战斗区" unique_id=1290994292]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.07450981, 0.078431375, 0.4627451)
+
+[node name="Label" type="Label" parent="战斗区/ColorRect" unique_id=1098186900]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "战斗区"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="置牌区" type="Control" parent="." unique_id=1962237382]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = 190.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(960, 165)
+
+[node name="抽牌区" type="Node" parent="置牌区" unique_id=1944052815]
+
+[node name="抽牌堆" type="Node" parent="置牌区" unique_id=44317821]
+
+[node name="手牌区" type="Node" parent="置牌区" unique_id=933665403]
+
+[node name="弃牌堆" type="Node" parent="置牌区" unique_id=327810109]
+
+[node name="结束回合" type="Node" parent="置牌区" unique_id=462405193]
+
+[node name="ColorRect" type="ColorRect" parent="置牌区" unique_id=576289794]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.2784314, 1, 1, 0.4627451)
+
+[node name="Label" type="Label" parent="置牌区/ColorRect" unique_id=1374674853]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "置牌区"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="玩家HUD底板" type="ColorRect" parent="." unique_id=1812800948]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.24705882)
