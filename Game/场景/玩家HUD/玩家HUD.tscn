@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cv37bworkhmv3" path="res://Game/图片/角色/头像/朝洛角色图.png" id="1_gvokm"]
 [ext_resource type="Texture2D" uid="uid://bo3u7enpfy51o" path="res://Game/图片/边框/panel-border-009.png" id="2_8fo4b"]
+[ext_resource type="Texture2D" uid="uid://bfn0e1abm8jfa" path="res://Game/图片/图标/墨参考.png" id="2_jjmnb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_khhxn"]
 bg_color = Color(0.46355194, 0.8868474, 0.95952255, 1)
@@ -162,11 +163,13 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 50.0
+offset_left = 20.0
 offset_top = -50.0
-offset_right = 150.0
-offset_bottom = 50.0
+offset_right = 2068.0
+offset_bottom = 1998.0
 grow_vertical = 2
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("2_jjmnb")
 
 [node name="墨数值" type="Label" parent="顶部栏/墨" unique_id=473666465]
 layout_mode = 1
